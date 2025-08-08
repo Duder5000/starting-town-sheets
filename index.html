@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D&D 5e Character Sheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>D&D 5e Character Sheet</h1>
+
+    <!-- Character Info -->
+    <section class="section">
+        <label>Name: <input type="text" id="charName"></label>
+        <label>Class & Level: <input type="text" id="charClass"></label>
+        <label>Background: <input type="text" id="charBackground"></label>
+        <label>Player: <input type="text" id="charPlayer"></label>
+        <label>Race: <input type="text" id="charRace"></label>
+        <label>Alignment: <input type="text" id="charAlignment"></label>
+        <label>XP: <input type="number" id="charXP"></label>
+    </section>
+
+    <!-- Ability Scores -->
+    <section class="section abilities">
+        <h2>Ability Scores</h2>
+        <div class="ability">
+            <label>STR: <input type="number" id="str" min="1" max="30"></label>
+            <span id="strMod">+0</span>
+        </div>
+        <div class="ability">
+            <label>DEX: <input type="number" id="dex" min="1" max="30"></label>
+            <span id="dexMod">+0</span>
+        </div>
+        <div class="ability">
+            <label>CON: <input type="number" id="con" min="1" max="30"></label>
+            <span id="conMod">+0</span>
+        </div>
+        <div class="ability">
+            <label>INT: <input type="number" id="int" min="1" max="30"></label>
+            <span id="intMod">+0</span>
+        </div>
+        <div class="ability">
+            <label>WIS: <input type="number" id="wis" min="1" max="30"></label>
+            <span id="wisMod">+0</span>
+        </div>
+        <div class="ability">
+            <label>CHA: <input type="number" id="cha" min="1" max="30"></label>
+            <span id="chaMod">+0</span>
+        </div>
+    </section>
+
+    <!-- Saves & Skills -->
+    <section class="section">
+        <label>Proficiency Bonus: <input type="number" id="profBonus" value="2"></label>
+        <h2>Saving Throws</h2>
+        <div id="savingThrows"></div>
+
+        <h2>Skills</h2>
+        <div id="skills"></div>
+    </section>
+
+    <!-- Combat Stats -->
+    <section class="section">
+        <label>AC: <input type="number" id="ac"></label>
+        <label>Initiative: <input type="number" id="initiative"></label>
+        <label>Speed: <input type="text" id="speed"></label>
+        <label>Current HP: <input type="number" id="currentHP"></label>
+        <label>Max HP: <input type="number" id="maxHP"></label>
+        <label>Hit Dice: <input type="text" id="hitDice"></label>
+    </section>
+
+    <!-- Attacks -->
+    <section class="section">
+        <h2>Attacks & Spellcasting</h2>
+        <table id="attacksTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Attack Bonus</th>
+                    <th>Damage/Type</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button id="addAttack">Add Attack</button>
+    </section>
+
+    <!-- Features & Equipment -->
+    <section class="section">
+        <h2>Features & Traits</h2>
+        <textarea id="features"></textarea>
+        <h2>Equipment</h2>
+        <textarea id="equipment"></textarea>
+    </section>
+
+    <!-- Export / Import -->
+    <section class="section">
+        <button id="saveSheet">Save</button>
+        <button id="loadSheet">Load</button>
+        <button id="exportJSON">Export JSON</button>
+        <input type="file" id="importJSON" style="display:none">
+        <button id="importButton">Import JSON</button>
+        <button id="clearSheet">Clear</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
